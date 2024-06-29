@@ -5,3 +5,5 @@ end
 get("/zebra")do
 "We must add a route for each path we support"
 end
+require "sinatra/reloader"
+

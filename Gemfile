@@ -3,3 +3,4 @@ gem "sinatra"
 gem "puma"
 
 gem "rackup", "~> 2.1"
+gem "sinatra-contrib"
