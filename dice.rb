@@ -45,3 +45,9 @@ outcome="You rolled a #{first_die} and a #{second_die} for a total of #{sum}"
 "<h1>5d4</h1>
 <p>#{outcome}</p>"
 end
+require "better_errors"
+require "binding_of_caller"
+use(BetterErrors::Middleware)
+BetterErrors.application_root = __dir__
+BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
+
