@@ -8,7 +8,6 @@ BetterErrors.application_root = __dir__
 BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
 
-
 get("/") do
 erb(:elephant)
 end
@@ -29,8 +28,8 @@ get("/dice/2/6") do
 	
   outcome = "You rolled a #{first_die} and a #{second_die} for a total of #{sum}."
 	
-  "<h1>2d6</h1>
-   <p>#{outcome}</p>"
+erb(:two_six)
+
 end
 get("/dice/2/10")do
 first_die = rand(1..6)
