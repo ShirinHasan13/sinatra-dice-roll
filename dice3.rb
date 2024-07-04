@@ -74,14 +74,28 @@ erb(:two_ten)
 
 end
 get("/dice/1/20")do
-@die=rand(1..20)
 
-@outcome="You rolled a #{@die}." 
+  @rolls = []    # Create a blank array
+
+  1.times do   # 100 times...
+    die = rand(1..20)    # Generate a random number
+
+    @rolls.push(die)    # Add the random number to the array 
+  end
+
+ 
 erb(:one_twenty)
 end
 
 get("/dice/5/4")do
-@die=rand(1..4)
-@outcome="You rolled a #{@die}."
+
+  @rolls = []    # Create a blank array
+
+  5.times do    
+    die = rand(1..4)    # Generate a random number
+
+    @rolls.push(die)    # Add the random number to the array 
+  end
+
 erb(:five_four)
 end
