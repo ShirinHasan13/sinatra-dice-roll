@@ -49,7 +49,7 @@ get("/dice/2/6") do
   
     @rolls = []    # Create a blank array
   
-    2.times do    # 100 times...
+    2.times do    
       die = rand(1..6)    # Generate a random number
   
       @rolls.push(die)    # Add the random number to the array 
@@ -61,8 +61,14 @@ erb(:two_six)
 
 end
 get("/dice/2/10")do
-@die=rand(1..10)
-@outcome = "You rolled a #{@die}."
+
+  @rolls = []    # Create a blank array
+
+  2.times do    
+    die = rand(1..10)    # Generate a random number
+
+    @rolls.push(die)    # Add the random number to the array 
+  end
 
 erb(:two_ten)
 
